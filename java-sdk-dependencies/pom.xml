@@ -13,19 +13,23 @@
   <packaging>pom</packaging>
   <name>java-sdk-dependencies</name>
   <url>https://github.com/dragontree101</url>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <java.version>11</java.version>
+
+    <commons-codec.verion>1.14</commons-codec.verion>
   </properties>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.squareup.okhttp3</groupId>
-        <artifactId>okhttp</artifactId>
-        <version>3.14.9</version>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>${commons-codec.verion}</version>
       </dependency>
+
 
       <dependency>
         <groupId>com.huinong.sdk</groupId>

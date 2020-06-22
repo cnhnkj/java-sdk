@@ -21,7 +21,7 @@
 
   <modules>
     <module>common-module</module>
-    <module>agricultural-technology-module</module>
+    <module>agricultural-module</module>
 
   </modules>
 
