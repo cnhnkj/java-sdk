@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.huinong.sdk</groupId>
+  <artifactId>java-sdk-build</artifactId>
+  <packaging>pom</packaging>
+  <version>${revision}</version>
+  <name>java-sdk-build</name>
+  <description>java-sdk-build</description>
+  <url>https://github.com/dragontree101</url>
+
+  <developers>
+    <developer>
+      <id>dragontree101</id>
+      <name>Long Zhe</name>
+      <email>dragonlong1986@126.com</email>
+      <url>https://github.com/dragontree101</url>
+    </developer>
+    <developer>
+      <id>liuhua</id>
+      <name>Liu Hua</name>
+      <email>liuhua@cnhnkj.com</email>
+    </developer>
+  </developers>
+
+  <properties>
+    <main.basedir>${basedir}</main.basedir>
+    <revision>1.0.0-SNAPSHOT</revision>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>java-sdk-dependencies</module>
+        <module>java-sdk-parent</module>
+        <module>java-sdk-modules</module>
+      </modules>
+    </profile>
+  </profiles>
+
+
+</project>
