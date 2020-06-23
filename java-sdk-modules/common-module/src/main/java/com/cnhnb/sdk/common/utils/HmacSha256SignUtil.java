@@ -23,9 +23,6 @@ public class HmacSha256SignUtil {
     return getHmacSha256Sign(basicConfiguration.getSecretKey(), params);
   }
 
-  /**
-   * 适用于所有参数，包括accessKey等都已经放到params的情况
-   */
   private static String getHmacSha256Sign(String secretKey, Map<String, String> params) {
     List<String> list = new ArrayList<>();
     for (Map.Entry<String, String> entry : params.entrySet()) {

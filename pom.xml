@@ -39,7 +39,7 @@
 
   <properties>
     <main.basedir>${basedir}</main.basedir>
-    <revision>1.0.0</revision>
+    <revision>0.0.1</revision>
   </properties>
 
   <profiles>
@@ -66,6 +66,19 @@
                 <phase>verify</phase>
                 <goals>
                   <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.2.0</version>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>jar</goal>
                 </goals>
               </execution>
             </executions>
