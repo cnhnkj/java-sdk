@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.huinong.sdk</groupId>
   <artifactId>java-sdk-build</artifactId>
@@ -9,6 +9,13 @@
   <name>java-sdk-build</name>
   <description>java-sdk-build</description>
   <url>https://github.com/dragontree101</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
 
   <developers>
     <developer>
@@ -23,6 +30,12 @@
       <email>liuhua@cnhnkj.com</email>
     </developer>
   </developers>
+
+
+  <scm>
+    <url>https://github.com/cnhnkj/java-sdk.git</url>
+    <connection>scm:git:git@github.com:cnhnkj/java-sdk.git</connection>
+  </scm>
 
   <properties>
     <main.basedir>${basedir}</main.basedir>
@@ -40,8 +53,39 @@
         <module>java-sdk-parent</module>
         <module>java-sdk-modules</module>
       </modules>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>1.6</version>
+            <executions>
+              <execution>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
+
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>oss</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>oss</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
 
 
 </project>

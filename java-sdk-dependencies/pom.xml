@@ -20,6 +20,7 @@
     <java.version>11</java.version>
 
     <commons-codec.verion>1.14</commons-codec.verion>
+    <okhttp.verion>4.7.2</okhttp.verion>
   </properties>
 
   <dependencyManagement>
