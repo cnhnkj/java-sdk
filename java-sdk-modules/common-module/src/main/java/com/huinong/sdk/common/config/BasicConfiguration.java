@@ -1,4 +1,4 @@
-package com.huinong.sdk.common.config;
+package com.cnhnb.sdk.common.config;
 
 public class BasicConfiguration {
 

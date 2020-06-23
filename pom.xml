@@ -2,7 +2,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.huinong.sdk</groupId>
+  <groupId>com.cnhnb.sdk</groupId>
   <artifactId>java-sdk-build</artifactId>
   <packaging>pom</packaging>
   <version>${revision}</version>
@@ -39,7 +39,7 @@
 
   <properties>
     <main.basedir>${basedir}</main.basedir>
-    <revision>1.0.0-SNAPSHOT</revision>
+    <revision>1.0.0</revision>
   </properties>
 
   <profiles>
@@ -78,11 +78,11 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>oss</id>
+      <id>oss-maven-center</id>
       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
     </snapshotRepository>
     <repository>
-      <id>oss</id>
+      <id>oss-maven-center</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>

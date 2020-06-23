@@ -1,4 +1,4 @@
-package com.huinong.sdk.agricultural;
+package com.cnhnb.sdk.agricultural;
 
 public class App {
 

@@ -1,6 +1,6 @@
-package com.huinong.sdk.common.utils;
+package com.cnhnb.sdk.common.utils;
 
-import com.huinong.sdk.common.config.BasicConfiguration;
+import com.cnhnb.sdk.common.config.BasicConfiguration;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

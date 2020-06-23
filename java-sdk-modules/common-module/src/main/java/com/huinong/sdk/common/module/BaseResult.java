@@ -1,4 +1,4 @@
-package com.huinong.sdk.common.module;
+package com.cnhnb.sdk.common.module;
 
 public class BaseResult<T> {
 
