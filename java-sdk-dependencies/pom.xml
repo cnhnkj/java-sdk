@@ -20,7 +20,8 @@
     <java.version>11</java.version>
 
     <commons-codec.verion>1.14</commons-codec.verion>
-    <okhttp.verion>4.7.2</okhttp.verion>
+    <okhttp.verion>3.14.9</okhttp.verion>
+    <slf4j.version>1.7.30</slf4j.version>
   </properties>
 
   <dependencyManagement>
@@ -30,6 +31,22 @@
         <artifactId>commons-codec</artifactId>
         <version>${commons-codec.verion}</version>
       </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>${okhttp.verion}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>logging-interceptor</artifactId>
+        <version>${okhttp.verion}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+
 
 
       <dependency>
