@@ -4,6 +4,15 @@
 
 ## 农技问答接口的使用方式
 
+pom.xml里面引入依赖
+```
+    <dependency>
+      <groupId>com.cnhnb.sdk</groupId>
+      <artifactId>agricultural-module</artifactId>
+      <version>0.0.2</version>
+    </dependency>
+```
+
 接口方法：questionList
 接口含义：获取前10热门品类行情
 
