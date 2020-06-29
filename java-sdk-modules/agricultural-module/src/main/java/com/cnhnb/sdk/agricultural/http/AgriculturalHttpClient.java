@@ -29,7 +29,6 @@ public class AgriculturalHttpClient {
    * 测试环境 AgriculturalConstants.TEST_QUESTION_LIST_URL
    * 生产环境 AgriculturalConstants.PROD_QUESTION_LIST_URL
    * @param shareInfo, 业务参数对象
-   * @return BaseResult<List<QuestionAndAnswerShareInfo>>
    */
   public BaseResult<List<QuestionAndAnswerShareInfo>> questionList(String url, ShareInfo shareInfo) {
     Map<String, String> params = Sha256SignUtil.generateParams(shareInfo);
