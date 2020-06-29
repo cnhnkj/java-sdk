@@ -48,4 +48,14 @@ public class BaseResult<T> {
   public void setData(T data) {
     this.data = data;
   }
+
+  @Override
+  public String toString() {
+    return "BaseResult{" +
+        "code=" + code +
+        ", msg='" + msg + '\'' +
+        ", traceId='" + traceId + '\'' +
+        ", data=" + data +
+        '}';
+  }
 }

@@ -1,5 +1,13 @@
 package com.cnhnb.sdk.samples;
 
+import com.cnhnb.sdk.agricultural.common.AgriculturalConstants;
+import com.cnhnb.sdk.agricultural.http.AgriculturalHttpClient;
+import com.cnhnb.sdk.agricultural.module.request.ShareInfo;
+import com.cnhnb.sdk.agricultural.module.response.QuestionAndAnswerShareInfo;
+import com.cnhnb.sdk.common.module.BaseResult;
+import com.cnhnb.sdk.common.okhttp.HnOkHttpClient;
+import java.util.List;
+
 public class AgriculturalExample {
 
   public static void main(String[] args) {
@@ -9,5 +17,13 @@ public class AgriculturalExample {
 
     System.out.println("ACCESS_KEY is " + ACCESS_KEY + ", SECRET_KEY is " + SECRET_KEY);
 
+    HnOkHttpClient hnOkHttpClient = new HnOkHttpClient();
+    AgriculturalHttpClient agriculturalHttpClient = new AgriculturalHttpClient(hnOkHttpClient);
+
+    ShareInfo shareInfo = new ShareInfo();
+    BaseResult<List<QuestionAndAnswerShareInfo>> baseResult = agriculturalHttpClient
+        .questionList(AgriculturalConstants.TEST_QUESTION_LIST_URL, shareInfo);
+
+    System.out.println(baseResult.toString());
   }
 }
