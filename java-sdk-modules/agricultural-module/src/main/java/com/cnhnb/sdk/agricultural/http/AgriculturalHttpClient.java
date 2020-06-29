@@ -11,6 +11,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 
@@ -23,12 +24,14 @@ public class AgriculturalHttpClient {
   }
 
   public BaseResult<List<QuestionAndAnswerShareInfo>> questionList(String url, ShareInfo shareInfo) {
-    String sign = Sha256SignUtil.generateSign(shareInfo);
+    Map<String, String> params = Sha256SignUtil.generateParams(shareInfo);
+    String sign = Sha256SignUtil.getSign(params);
     shareInfo.setSign(sign);
+    params.put("sign", sign);
 
     BaseResult<List<QuestionAndAnswerShareInfo>> baseResult = new BaseResult<>();
     try {
-      Response response = hnOkHttpClient.post(url, new HashMap<>(), new HashMap<>());
+      Response response = hnOkHttpClient.post(url, params, new HashMap<>());
       ResponseBody responseBody = response.body();
       if (responseBody == null) {
         return baseResult;

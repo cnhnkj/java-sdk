@@ -30,7 +30,7 @@ public class AgriculturalExample {
 
     shareInfo.setAccessKey(ACCESS_KEY);
     shareInfo.setSecretKey(SECRET_KEY);
-    
+
     BaseResult<List<QuestionAndAnswerShareInfo>> baseResult = agriculturalHttpClient
         .questionList(AgriculturalConstants.TEST_QUESTION_LIST_URL, shareInfo);
 
