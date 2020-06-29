@@ -39,7 +39,7 @@
 
   <properties>
     <main.basedir>${basedir}</main.basedir>
-    <revision>0.0.2-SNAPSHOT</revision>
+    <revision>0.0.2</revision>
   </properties>
 
   <profiles>
