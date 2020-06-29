@@ -86,6 +86,15 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>sample</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <modules>
+        <module>sdk-examples</module>
+      </modules>
+    </profile>
   </profiles>
 
 

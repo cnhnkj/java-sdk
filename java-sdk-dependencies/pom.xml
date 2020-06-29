@@ -54,6 +54,11 @@
         <artifactId>common-module</artifactId>
         <version>${revision}</version>
       </dependency>
+      <dependency>
+        <groupId>com.cnhnb.sdk</groupId>
+        <artifactId>agricultural-module</artifactId>
+        <version>${revision}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
