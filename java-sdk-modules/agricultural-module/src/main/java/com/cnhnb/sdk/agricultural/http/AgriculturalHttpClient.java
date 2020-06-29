@@ -23,6 +23,14 @@ public class AgriculturalHttpClient {
     this.hnOkHttpClient = hnOkHttpClient;
   }
 
+  /**
+   * 获取前10热门品类行情
+   * @param url，请求的url，包括测试环境和生产环境，通过常量进行设置
+   * 测试环境 AgriculturalConstants.TEST_QUESTION_LIST_URL
+   * 生产环境 AgriculturalConstants.PROD_QUESTION_LIST_URL
+   * @param shareInfo, 业务参数对象
+   * @return BaseResult<List<QuestionAndAnswerShareInfo>>
+   */
   public BaseResult<List<QuestionAndAnswerShareInfo>> questionList(String url, ShareInfo shareInfo) {
     Map<String, String> params = Sha256SignUtil.generateParams(shareInfo);
     String sign = Sha256SignUtil.getSign(params);
