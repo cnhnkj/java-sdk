@@ -12,15 +12,25 @@ public class AgriculturalExample {
 
   public static void main(String[] args) {
     //设置需要操作的账号的AK和SK
-    String ACCESS_KEY = "DWQOcrnPp1ogwgAHBdIK1mI-";
-    String SECRET_KEY = "cJFhYuaq7Vo35e1pmXO0aGkJG";
-
-    System.out.println("ACCESS_KEY is " + ACCESS_KEY + ", SECRET_KEY is " + SECRET_KEY);
+    String ACCESS_KEY = AgriculturalConstants.TEST_ACCESS_KEY;
+    String SECRET_KEY = AgriculturalConstants.TEST_SECRET_KEY;
 
     HnOkHttpClient hnOkHttpClient = new HnOkHttpClient();
     AgriculturalHttpClient agriculturalHttpClient = new AgriculturalHttpClient(hnOkHttpClient);
 
     ShareInfo shareInfo = new ShareInfo();
+    shareInfo.setStartTime("2020-06-11");
+    shareInfo.setEndTime("2020-06-12");
+    shareInfo.setNonce("abc");
+    shareInfo.setPageNo(1);
+    shareInfo.setPageSize(10);
+    shareInfo.setPower("1");
+    shareInfo.setSignAlgorithm("SHA-256");
+    shareInfo.setTimestamp(1591932229714L);
+
+    shareInfo.setAccessKey(ACCESS_KEY);
+    shareInfo.setSecretKey(SECRET_KEY);
+    
     BaseResult<List<QuestionAndAnswerShareInfo>> baseResult = agriculturalHttpClient
         .questionList(AgriculturalConstants.TEST_QUESTION_LIST_URL, shareInfo);
 
